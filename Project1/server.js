@@ -13,6 +13,9 @@ const start = () => {
     res.sendFile(`index.html`, { root: www });
   });
 
+
+  // call to non compliant code
+
   nonCompliantCode();
 
   app.listen(port, () => captains.log(`listening on http://localhost:${port}`));
@@ -23,6 +26,5 @@ function nonCompliantCode(req, res){
   const tainted = req.query.name;
   res.send(tainted); // Noncompliant
 }
-
 
 start();
