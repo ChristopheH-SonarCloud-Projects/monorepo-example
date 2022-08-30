@@ -24,5 +24,10 @@ function nonCompliantCode(req, res){
   res.send(tainted); // Noncompliant
 }
 
+var j = 0;
+while (true) { // Noncompliant; constant end condition
+  j++;
+}
+
 
 start();
